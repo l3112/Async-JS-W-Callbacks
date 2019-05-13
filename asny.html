@@ -1,0 +1,41 @@
+<!--- The old way; Async JS with callbacks 
+The complete JS course 2019 on Udemy-->
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><R></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        
+        function getRecipe(){
+    setTimeout(()=> {
+        const recipeID = [53,342,647,225];
+        console.log(recipeID);
+
+        setTimeout(id => {
+            const recipe = {title: `Mama Vitoni's 68 Cheese Dip`, publisher: `Mouse Haus Printers`};
+            console.log(`${id}: ${recipe.title} ${recipe.publisher}`);
+        setTimeout(publisher => {
+                const recipe2 = {title: `Grass-Cuttings Salad`, publisher: `Mouse Haus Printing`}
+                console.log(recipe2);
+        },1600, recipe.publisher);
+        },1000, recipeID[3]);
+    }, 1500);
+}    
+        getRecipe();
+        
+async function getRecipeAM(){
+    const IDs = await getIDs;
+    const recipe = await getRecipe(IDs[2]);
+    console.log(recipe);
+}
+getRecipeAM();
+    </script>
+</body>
+</html>
